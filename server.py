@@ -12,7 +12,6 @@ correctKey = "Elaina"
 
 # 串口配置
 SERIAL_PORT = '/dev/ttyTHS1'
-SERIAL_PORT = 'COM3'
 BAUDRATE = 115200
 
 # 初始化串口

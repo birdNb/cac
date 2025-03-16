@@ -55,11 +55,6 @@ function carCommand8() {
 document.addEventListener("keydown",carRun);
 function carRun(event)
 {
-    //控制小车的运动
-    if(event.keyCode === 87) {alert("W");}
-    else if(event.keyCode === 83) {alert("S");}
-    else if(event.keyCode === 65) {alert("A");}
-    else if(event.keyCode === 68) {alert("D");}
     //控制小车的姿态
     if(event.keyCode === 49) {carCommand1(); }
     else if(event.keyCode === 50) {carCommand2();}
