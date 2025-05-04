@@ -1,7 +1,8 @@
 body{
     background-image: url("../Photo/robot1.png");
     background-repeat:no-repeat;
-    background-size: cover;
+    background-size: cover; 
+
 }
 
 form{
@@ -13,12 +14,29 @@ form{
 }
 
 
-/*      美化密钥       */
-input[type=password]{
+input[type=name] {
+    background-color: withe;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    text-align: center;
+    height: 50px;
+    width: 250px;
+    margin: 5p;
+}
 
+input[type=name]:hover {
+    outline: none;
+    background-color: lightblue;
+    color: withe;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.45), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+input[type=password] {
     background-color: white;
     color: black;
-    border:none;
+    border: none;
     border-radius: 20px;
     outline: none;
     text-align: center;
@@ -28,7 +46,6 @@ input[type=password]{
 }
 
 
-/*      设置鼠标指针在密钥上时的悬停效果        */
 input[type=password]:hover{
     outline: none;
     background-color: #65BCD6;
@@ -37,8 +54,7 @@ input[type=password]:hover{
 }
 
 
-/*      美化验证   */
-input[type=submit]{
+#message {
     background-color: #45A0F2;
     color: white;
     border:none;
@@ -51,10 +67,29 @@ input[type=submit]{
 }
 
 
-/*      设置鼠标指针在验证上时的悬停效果         */
-input[type=submit]:hover{
+#message:hover {
     outline: none;
     background-color:#168DBE;
     color: white;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.45), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#createUser {
+    background-color: #45A0F2;
+    color: white;
+    border:none;
+    border-radius: 20px;
+    outline: none;
+    text-align: center;
+    height: 50px;
+    width: 250px;
+    margin: 5px;
+}
+
+
+#createUser:hover {
+    outline: none;
+    background-color:#168DBE;
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(143, 76, 76, 0.45), 0 6px 20px 0 rgba(0,0,0,0.19);
 }

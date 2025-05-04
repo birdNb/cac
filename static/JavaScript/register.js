@@ -27,3 +27,4 @@ function imgChange(event) {
 }
 //按除去ESC的任意键进入登入界面，按ESC键返回初始界面
 //在登录界面按enter登录，按ESC返回初始界面      
+

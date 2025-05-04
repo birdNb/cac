@@ -63,15 +63,36 @@ def toFunction():
 def index():
     return render_template('register.html')
 
-#验证密钥，若验证成功就前往功能页面，否则返回验证页面
-@app.route("/keySubmit",methods=["POST"])
-def check_out():
-    key = request.form.get("key")
-    if (key == correctKey):
-        return render_template("function.html")
-    else:
-        return render_template("register.html")
 
+
+#验证用户信息，若验证成功就前往功能页面，否则返回验证页面
+@app.route("/messageSubmit",methods=["POST"])
+def check_out():
+    userName = request.form.get("userName")
+    userPassword = request.form.get("userPassword")
+    with open("user.txt","r",encoding="utf_8")as file:
+        for line in file:
+            if line.strip()==f"{userName}{userPassword}":
+                return render_template("function.html")
+    return '<script> alert("账号或密码错误");window.location.href="/";</script>'
+
+#注册账号
+@app.route("/createUser",methods=["POST"])
+def createUser():
+    userName=request.form.get("userName")
+    userPassword=request.form.get("userPassword")
+    with open("user.txt","w",encoding="utf_8") as file:
+        file.write(f"{userName}{userPassword}")
+        file.write("\n")
+    return '<script> alert("新用户注册成功");window.location.href="/register.html";</script>'
+
+#跳转到注册页面
+@app.route("/toCreateUser",methods=["POST"])
+def toCreateUser():
+    return render_template("createUser.html")
+
+
+    
 # 指令接收接口
 @app.route('/command', methods=['POST'])
 def handle_command():
